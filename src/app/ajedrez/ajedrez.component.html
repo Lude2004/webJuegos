@@ -1,0 +1,54 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header bg-primary text-white">
+          <h2 class="mb-0">Ajedrez</h2>
+        </div>
+        <div class="card-body">
+          <div class="chess-board-container">
+            <canvas #tablero (click)="handleClick($event)" class="chess-board"></canvas>
+          </div>
+          <div class="mt-3 text-center">
+            <h4 *ngIf="resultadoJuego" class="alert" [ngClass]="juegoTerminado ? 'alert-success' : 'alert-info'">
+              {{ resultadoJuego }}
+            </h4>
+            <p>Turno de las {{ turnoActual }}</p>
+            <div class="btn-group">
+              <button class="btn btn-primary" (click)="reiniciarJuego()">Reiniciar</button>
+              <button class="btn btn-secondary" (click)="deshacer()" [disabled]="historialMovimientos.length === 0">Deshacer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header bg-secondary text-white">
+          <h3 class="mb-0">Historial de movimientos</h3>
+        </div>
+        <div class="card-body">
+          <div class="historial-container">
+            <ul class="list-group">
+              <li *ngFor="let move of historialMovimientos" class="list-group-item">{{ move }}</li>
+              <li *ngIf="historialMovimientos.length === 0" class="list-group-item text-muted">Sin movimientos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card mt-3">
+        <div class="card-header bg-info text-white">
+          <h3 class="mb-0">Instrucciones</h3>
+        </div>
+        <div class="card-body">
+          <ul class="list-group">
+            <li class="list-group-item">Haz clic en una pieza para seleccionarla</li>
+            <li class="list-group-item">Los movimientos posibles se mostrarán con puntos verdes</li>
+            <li class="list-group-item">Haz clic en una casilla válida para mover la pieza</li>
+            <li class="list-group-item">El objetivo es dar jaque mate al rey oponente</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,211 @@
+/* Estilos generales para nuestro blog de videojuegos */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+.wrapper {
+    background-color: #f8f9fa;
+}
+
+/* Estilos del encabezado */
+.page-header {
+    min-height: 100vh;
+    max-height: 999px;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header-image {
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.content-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 15px;
+    width: 100%;
+    max-width: 880px;
+    color: white;
+}
+
+.content-center .n-logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.content-center h1 {
+    font-size: 5.5em;
+    font-weight: 900;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.content-center h3 {
+    font-size: 1.7em;
+    max-width: 500px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Estilos para la sección de blog */
+.section-blog {
+    padding: 70px 0;
+    background-color: #f8f9fa;
+}
+
+.section-blog .card-blog {
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.1);
+}
+
+.section-blog .card-blog:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+.section-blog .card-image {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+}
+
+.section-blog .card-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.section-blog .card-image img:hover {
+    transform: scale(1.05);
+}
+
+.section-blog .card-body {
+    padding: 20px;
+}
+
+.section-blog .category {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.section-blog .card-title {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.section-blog .card-title a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.section-blog .card-title a:hover {
+    color: #e91e63;
+}
+
+.section-blog .card-description {
+    color: #777;
+    line-height: 1.6;
+}
+
+.section-blog .card-footer {
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-blog .author {
+    display: flex;
+    align-items: center;
+}
+
+.section-blog .author .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.section-blog .stats {
+    color: #999;
+    font-size: 0.9em;
+}
+
+/* Estilos para la sección de reseñas */
+.section-reviews {
+    padding: 70px 0;
+    background-color: #fff;
+}
+
+.section-reviews .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.section-reviews .card-header {
+    background-color: transparent;
+    border-bottom: none;
+    padding: 20px;
+}
+
+.section-reviews .card-title {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.section-reviews .card-subtitle {
+    font-weight: 400;
+}
+
+.section-reviews .score-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #ff3b30;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    box-shadow: 0 5px 15px rgba(255, 59, 48, 0.4);
+}
+
+.section-reviews .card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+.section-reviews .progress-container {
+    margin-bottom: 15px;
+}
+
+.section-reviews .progress-badge {
+    font-weight: 600;
+}
+
+.section-reviews .btn {
+    margin-top: 20px;
+}

@@ -1,0 +1,28 @@
+.chess-board-container {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.chess-board {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.historial-container {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.btn-group {
+  margin-top: 15px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .chess-board {
+    width: 100%;
+    height: auto;
+  }
+}
