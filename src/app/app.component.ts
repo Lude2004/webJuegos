@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import {MatCardModule} from '@angular/material/card';
 
 
@@ -8,7 +8,7 @@ import {MatCardModule} from '@angular/material/card';
   standalone: true,
   imports: 
   [
-    RouterOutlet,
+    RouterModule,
     MatCardModule
   ],
   templateUrl: './app.component.html',
